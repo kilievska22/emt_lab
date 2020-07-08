@@ -26,7 +26,7 @@ public class Project extends AbstractEntity<ProjectId> {
   return manager;
  }
 
- @ManyToOne
+    @ManyToOne
     private Employee manager;
     private Date startDate;
     private Date deadline;
@@ -68,7 +68,7 @@ public class Project extends AbstractEntity<ProjectId> {
  /*public Money getMoney() {
   return money;
  }*/
-
+public boolean finish(){return finished=true;}
  public boolean isDeleted() {
   return deleted;
  }

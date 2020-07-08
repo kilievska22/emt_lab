@@ -3,6 +3,7 @@ package mk.ukim.finki.emt.organisation.projects.domain.events;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
+import mk.ukim.finki.emt.organisation.projects.domain.model.ClientId;
 import mk.ukim.finki.emt.organisation.projects.domain.model.Project;
 import mk.ukim.finki.emt.organisation.projects.domain.model.ProjectId;
 import mk.ukim.finki.organisation.sharedkernel.domain.base.DomainEvent;
@@ -13,21 +14,21 @@ import java.util.Objects;
 
 @Getter
 public class ProjectFinished implements DomainEvent{
-    @JsonProperty("orderId")
-    private final ProjectId projectId;
+    @JsonProperty("clientId")
+    private final ClientId clientId;
     @JsonProperty("occurredOn")
     private final Instant occurredOn;
 
     @JsonCreator
-    public ProjectFinished(@JsonProperty("projectId") @NonNull ProjectId projectId,
+    public ProjectFinished(@JsonProperty("clientId") @NonNull ClientId clientId,
                         @JsonProperty("occurredOn") @NonNull Instant occurredOn) {
-        this.projectId = Objects.requireNonNull(projectId, "projectId must not be null");
+        this.clientId = Objects.requireNonNull(clientId, "clientId must not be null");
         this.occurredOn = Objects.requireNonNull(occurredOn, "occurredOn must not be null");
     }
 
     @NonNull
-    public ProjectId projectId() {
-        return projectId;
+    public ClientId clientId() {
+        return clientId;
     }
 
     @Override

@@ -27,6 +27,7 @@ public class Client extends AbstractEntity<ClientId>{
     private String phone;
     @Column(nullable = false)
     private boolean isActive;
+    public void changeStatus(){isActive=!isActive;}
 
     @Override
     public ClientId id(){return id;}
