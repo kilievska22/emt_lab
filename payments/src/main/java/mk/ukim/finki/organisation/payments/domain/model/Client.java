@@ -8,8 +8,7 @@ import javax.persistence.*;
 @Entity
 @Table(name="client")
 public class Client extends AbstractEntity<ClientId>{
-    @EmbeddedId
-    private ClientId id;
+
     @Version
     private Long version;
     @Column(nullable = false)
@@ -31,5 +30,5 @@ public class Client extends AbstractEntity<ClientId>{
 
     @Override
     public ClientId id(){return id;}
-
+   public Client(){}
 }

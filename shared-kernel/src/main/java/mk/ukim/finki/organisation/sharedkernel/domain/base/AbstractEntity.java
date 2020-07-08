@@ -10,7 +10,7 @@ import javax.persistence.MappedSuperclass;
 @Getter
 public abstract class AbstractEntity<ID extends DomainObjectId> implements IdentifyableDomainObject<ID> {
     @Id
-    private ID id;
+    protected ID id;
     public AbstractEntity() {
 
     }
