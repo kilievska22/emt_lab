@@ -9,4 +9,5 @@ public class ClientId extends DomainObjectId {
     public ClientId(String id) {
         super(id);
     }
+
 }

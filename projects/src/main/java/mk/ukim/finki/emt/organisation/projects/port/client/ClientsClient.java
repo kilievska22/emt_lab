@@ -23,9 +23,9 @@ public class ClientsClient implements Clients {
     private final RestTemplate restTemplate;
     private final String serverUrl;
 
-    ClientsClient(@Value("${app.product-catalog.url}") String serverUrl,
-                         @Value("${app.product-catalog.connect-timeout-ms}") int connectTimeout,
-                         @Value("${app.product-catalog.read-timeout-ms}") int readTimeout) {
+    ClientsClient(@Value("http://localhost:8081") String serverUrl,
+                         @Value("5000") int connectTimeout,
+                         @Value("5000") int readTimeout) {
         this.serverUrl = serverUrl;
         restTemplate = new RestTemplate();
         var requestFactory = new SimpleClientHttpRequestFactory();

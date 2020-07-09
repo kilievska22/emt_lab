@@ -14,13 +14,13 @@ import java.util.Objects;
 @Getter
 public class CityName implements ValueObject {
     @Column(name="city_name")
-    private final String name;
+    private  String name;
 
     @JsonCreator
     public CityName(@NonNull String name) {
         this.name = Objects.requireNonNull(name, "name must not be null");
     }
-
+    public CityName(){}
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

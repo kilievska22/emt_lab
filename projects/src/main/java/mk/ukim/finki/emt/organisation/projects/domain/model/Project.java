@@ -106,6 +106,7 @@ return employees;
      }
  @Embedded
  @AttributeOverride(name="id",column = @Column(name="clientId",nullable = false))
+
  private ClientId clientId;
     }
 

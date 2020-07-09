@@ -9,4 +9,17 @@ public class ClientId extends DomainObjectId {
     public ClientId(String id) {
         super(id);
     }
+    public ClientId(){}
+    @Override
+    public boolean equals(Object o) {
+
+        return ((ClientId) o).getId().equals(getId());
+
+
+    }
+    @Override
+    public int hashCode() {
+
+        return getId().hashCode();
+    }
 }

@@ -10,7 +10,7 @@ import java.util.UUID;
 @Getter
 public class DomainObjectId  implements ValueObject{
     private String id;
-
+public DomainObjectId(){}
     public DomainObjectId(String id) {
         this.id = id;
     }

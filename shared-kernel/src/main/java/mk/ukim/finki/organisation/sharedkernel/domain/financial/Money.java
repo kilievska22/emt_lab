@@ -13,9 +13,9 @@ import java.util.Objects;
 @Getter
 public class Money implements ValueObject {
     @Enumerated(value= EnumType.STRING)
-    private final Currency currency;
-    private final  int amount;
-
+    private  Currency currency;
+    private   int amount;
+public Money(){}
     public Money(@NonNull Currency currency, @NonNull  int amount) {
         this.currency = currency;
         this.amount = amount;

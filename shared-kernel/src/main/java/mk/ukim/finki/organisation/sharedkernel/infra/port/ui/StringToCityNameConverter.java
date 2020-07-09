@@ -1,4 +1,4 @@
-package mk.ukim.finki.organisation.sharedkernel.infra.port.ui;
+/*package mk.ukim.finki.organisation.sharedkernel.infra.port.ui;
 
 import com.vaadin.flow.data.binder.Result;
 import com.vaadin.flow.data.binder.ValueContext;
@@ -17,3 +17,4 @@ public class StringToCityNameConverter implements Converter<String, CityName> {
         return value == null ? "" : value.toString();
     }
 }
+*/
